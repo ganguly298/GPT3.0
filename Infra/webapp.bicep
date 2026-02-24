@@ -12,8 +12,7 @@ param branch string
 
 @secure()
 @description('GitHub Personal Access Token (PAT) with repo + workflow + write:packages scopes.')
-param repositoryToken string
-
+param repositoryToken string ///Helpful for CI/CD deployments, but can be left empty for manual deployments where the user will authenticate with GitHub during deployment.
 @description('SKU: Free or Standard')
 @allowed([
   'Free'
